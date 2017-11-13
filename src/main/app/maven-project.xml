@@ -29,6 +29,8 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
         <json:object-to-json-transformer doc:name="Object to JSON"/>
         <jms:outbound-endpoint queue="flights" connector-ref="Active_MQ" doc:name="JMS"/>
     </flow>
+    
+    
     <flow name="logfights">
         <jms:inbound-endpoint queue="flights" connector-ref="Active_MQ1" doc:name="JMS"/>
         <logger level="INFO" doc:name="Logger"/>
